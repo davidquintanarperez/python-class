@@ -1,5 +1,5 @@
 # set base image (host OS)
-FROM python
+FROM python:3.9
 
 # set the working directory in the container
 WORKDIR /home
@@ -11,10 +11,7 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # copy secciones
-COPY ["secciones/*", "."]
-
-# install jupyterlab
-RUN pip install jupyterlab
+COPY ["secciones", "."]
 
 # command to run on container start
 CMD ["jupyter-lab", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
