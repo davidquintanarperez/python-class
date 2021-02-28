@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Modulo iportable
+Módulo importable
 comentarios.ipynb
 """
 
